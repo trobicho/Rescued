@@ -81,7 +81,14 @@ else
 	}
 	
 	//if(x_speed!=0){
-		if(instance_place(X,y,obj_wall)!=noone || instance_place(X,y,obj_sas)!=noone || instance_place(X,y,obj_fume)!=noone){
+		if(instance_place(X,y,obj_sharpWall)!=noone && !invincible){
+			alarm[0]=room_speed*invincibilityFrame;
+			alarm[1]=room_speed*blinkRate;
+			invincible=true;
+			Health-=20;
+			audio_play_sound(snd_hitPlayer,1,false);
+		}
+		if(instance_place(X,y,obj_wall)!=noone || instance_place(X,y,obj_sharpWall)!=noone || instance_place(X,y,obj_fume)!=noone){
 			/*while(instance_place(x+sign(x_speed),y,obj_wall)==noone && instance_place(x+sign(x_speed),y,obj_sas)==noone)
 				x+=sign(x_speed);*/
 			//x-=4*x_speed/abs(x_speed);
@@ -89,7 +96,7 @@ else
 		}
 		else
 			x=X;
-		if(instance_place(x,Y,obj_wall)!=noone || instance_place(X,y,obj_sas)!=noone || instance_place(X,y,obj_fume)!=noone){
+		if(instance_place(x,Y,obj_wall)!=noone || instance_place(X,y,obj_sharpWall)!=noone || instance_place(X,y,obj_fume)!=noone){
 			/*while(instance_place(x,y+sign(y_speed),obj_wall)==noone && instance_place(x,y+sign(y_speed),obj_sas)==noone)
 				y+=sign(y_speed);*/
 			//y-=4*y_speed/abs(y_speed);
@@ -103,40 +110,40 @@ else
 	y+=y_speed;
 	*/
 
-	if(place_meeting(x,y,obj_wall) || place_meeting(x,y,obj_sas) || place_meeting(x,y,obj_fume)){
+	if(place_meeting(x,y,obj_wall) || place_meeting(x,y,obj_sharpWall) || place_meeting(x,y,obj_fume)){
 		for(var i=0; i<1000; i++){
-			if(!place_meeting(x+i,y,obj_wall) && !place_meeting(x+i,y,obj_sas) && !place_meeting(x+i,y,obj_fume)){
+			if(!place_meeting(x+i,y,obj_wall) && !place_meeting(x+i,y,obj_sharpWall) && !place_meeting(x+i,y,obj_fume)){
 				x+=i+1;
 				break;
 			}
-			if(!place_meeting(x-i,y,obj_wall) && !place_meeting(x-i,y,obj_sas) && !place_meeting(x-i,y,obj_fume)){
+			if(!place_meeting(x-i,y,obj_wall) && !place_meeting(x-i,y,obj_sharpWall) && !place_meeting(x-i,y,obj_fume)){
 				x-=i+1;
 				break;
 			}
-			if(!place_meeting(x,y+i,obj_wall) && !place_meeting(x,y+i,obj_sas) && !place_meeting(x,y+i,obj_fume)){
+			if(!place_meeting(x,y+i,obj_wall) && !place_meeting(x,y+i,obj_sharpWall) && !place_meeting(x,y+i,obj_fume)){
 				y+=i+1;
 				break;
 			}
-			if(!place_meeting(x,y-i,obj_wall) && !place_meeting(x,y-i,obj_sas) && !place_meeting(x,y-i,obj_fume)){
+			if(!place_meeting(x,y-i,obj_wall) && !place_meeting(x,y-i,obj_sharpWall) && !place_meeting(x,y-i,obj_fume)){
 				y-=i+1;
 				break;
 			}
-			if(!place_meeting(x+i,y+i,obj_wall) && !place_meeting(x+i,y+i,obj_sas) && !place_meeting(x+i,y+i,obj_fume)){
+			if(!place_meeting(x+i,y+i,obj_wall) && !place_meeting(x+i,y+i,obj_sharpWall) && !place_meeting(x+i,y+i,obj_fume)){
 				x+=i+1;
 				y+=i+1;
 				break;
 			}
-			if(!place_meeting(x+i,y-i,obj_wall) && !place_meeting(x+i,y-i,obj_sas) && !place_meeting(x+i,y-i,obj_fume)){
+			if(!place_meeting(x+i,y-i,obj_wall) && !place_meeting(x+i,y-i,obj_sharpWall) && !place_meeting(x+i,y-i,obj_fume)){
 				x+=i+1;
 				y-=i+1;
 				break;
 			}
-			if(!place_meeting(x-i,y+i,obj_wall) && !place_meeting(x-i,y+i,obj_sas) && !place_meeting(x-i,y+i,obj_fume)){
+			if(!place_meeting(x-i,y+i,obj_wall) && !place_meeting(x-i,y+i,obj_sharpWall) && !place_meeting(x-i,y+i,obj_fume)){
 				x-=i+1;
 				y+=i+1;
 				break;
 			}
-			if(!place_meeting(x-i,y-i,obj_wall) && !place_meeting(x-i,y-i,obj_sas) && !place_meeting(x-i,y-i,obj_fume)){
+			if(!place_meeting(x-i,y-i,obj_wall) && !place_meeting(x-i,y-i,obj_sharpWall) && !place_meeting(x-i,y-i,obj_fume)){
 				x-=i+1;
 				y-=i+1;
 				break;
