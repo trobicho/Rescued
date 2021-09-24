@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-/*
+
 if(!pause){
 	pause=true;
 	map=true;
@@ -17,4 +17,3 @@ else{
 	map=false;
 	//instance_activate_all();
 }
-*/

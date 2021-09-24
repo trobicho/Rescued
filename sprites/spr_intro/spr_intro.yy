@@ -62,7 +62,7 @@
     "spriteId": {"name":"spr_intro","path":"sprites/spr_intro/spr_intro.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 1.5,
+    "playbackSpeed": 8.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

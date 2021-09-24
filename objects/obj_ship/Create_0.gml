@@ -19,3 +19,5 @@ shootCooldown=0.2;
 canShoot=true;
 bulletOffsetX=0;
 bulletOffsetY=-55;
+
+isReversed=false;

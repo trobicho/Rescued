@@ -13,4 +13,10 @@ if(!pause){
 else{
 	pause=false;
 	//instance_activate_all();
+	with(obj_ship){
+		image_speed=1;
+	}
+	with(obj_pnj){
+		image_speed=1;
+	}
 }
