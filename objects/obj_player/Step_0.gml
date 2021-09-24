@@ -72,7 +72,7 @@ else
 			/*while(instance_place(x+sign(x_speed),y,obj_wall)==noone && instance_place(x+sign(x_speed),y,obj_sas)==noone)
 				x+=sign(x_speed);*/
 			//x-=4*x_speed/abs(x_speed);
-			x_speed=-1;
+			x_speed=-(bounce_speed * x_speed);
 		}
 		else
 			x=X;
@@ -80,7 +80,7 @@ else
 			/*while(instance_place(x,y+sign(y_speed),obj_wall)==noone && instance_place(x,y+sign(y_speed),obj_sas)==noone)
 				y+=sign(y_speed);*/
 			//y-=4*y_speed/abs(y_speed);
-			y_speed=0;
+			y_speed=-(bounce_speed * y_speed);
 		}
 		else
 			y=Y;
