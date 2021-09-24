@@ -2,8 +2,21 @@
 // You can write your code in this editor
 if(pause || diag) exit;
 
-Health-=delta_time/60000*o2Depletion;
+O2-=delta_time/60000*o2Depletion;
 if(Health<=0){
+	with(obj_dialogue){
+		dialogue=Dialogues.NO_HEALTH;
+		line=0;
+		diag=true;
+		done=false;
+	}
+	audio_play_sound(snd_runout,1,false);
+	instance_activate_object(obj_dialogue);
+	/*if(obj_dialogue.done==true){
+		room_restart();
+	}*/
+}
+if(O2<=0){
 	with(obj_dialogue){
 		dialogue=Dialogues.RUNOUT_O2;
 		line=0;

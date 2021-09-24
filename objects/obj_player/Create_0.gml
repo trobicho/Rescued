@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 Health=100;
+O2=100;
 o2Depletion=0.35;
 
 invincible=false;

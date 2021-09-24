@@ -36,6 +36,7 @@ dialogues[Dialogues.CLUE_1,0]="You found a clue to one of the crew members where
 
 dialogues[Dialogues.RUNOUT_O2,0]="You ran out of oxygen.";
 dialogues[Dialogues.RUNOUT_ENERGY,0]="You ran out of energy and are now stranded in this solar system.";
+dialogues[Dialogues.NO_HEALTH,0]="The debris flying around made the ship too hard to navigate.";
 
 dialogues[Dialogues.FOUND_PNJ1,0]="Crew 1: \"Hey, you found me!\"";
 dialogues[Dialogues.FOUND_PNJ1,1]="Crew 1: \"Thank god I'm not going to die out here.\"";

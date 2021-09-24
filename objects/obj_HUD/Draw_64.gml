@@ -11,8 +11,14 @@ else if(room==Platformer1 || room==Platformer3 || room==Platformer2  || room==Pl
 	var hp=obj_player.Health;
 	draw_set_alpha(1);
 	draw_set_color(c_white);
-	draw_text(35,685,"O2");
-	draw_healthbar(50,590,65,680,hp,c_white,c_green,c_green,3,false,true);
+	draw_text(43,685,"HP");
+	draw_healthbar(45,590,60,680,hp,c_white,c_green,c_green,3,false,true);
+	
+	var o2=obj_player.O2;
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+	draw_text(70,685,"O2");
+	draw_healthbar(70,590,85,680,o2,c_white,c_green,c_green,3,false,true);
 }
 else if(room==Shmup){
 	var hp=obj_ship.shmupHealth;

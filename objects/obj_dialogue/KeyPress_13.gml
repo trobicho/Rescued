@@ -30,6 +30,9 @@ if(line==array_length_2d(dialogues,dialogue)-1){
 		case Dialogues.RUNOUT_ENERGY:
 			room_restart();
 			break;
+		case Dialogues.NO_HEALTH:
+			room_restart();
+			break;
 		case Dialogues.FOUND_PNJ1:
 			phase=2;
 			room_goto(Room1);
