@@ -10,6 +10,7 @@ function scr_exploreMovement(){
 	}
 	if(delta_y!=0 || autopilot){
 		spd=lerp(spd,maxSpeed,0.1);
+		Health-=delta_time/60000*energyCost;
 		/*
 		var newDir=point_direction(0,0,delta_x,delta_y);
 		if(abs(newDir-dir)<=90 || abs(360-newDir+dir)<=90){

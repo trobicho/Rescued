@@ -2,13 +2,16 @@
 // You can write your code in this editor
 if(pause || diag) exit;
 
+/*
 if(distance_to_object(obj_star1)<400){
 	//Health-=delta_time/60000*energyCost*2;
 	Health-=delta_time/60000*energyCost;
 }
 else
 	Health-=delta_time/60000*energyCost;
-	
+*/
+
+
 if(Health<=0 && !died && room!=Shmup){
 	instance_activate_object(obj_dialogue);
 	with(obj_dialogue){
