@@ -3,3 +3,4 @@
 
 foundPlanet=false;
 scanned=false;
+step=0;
