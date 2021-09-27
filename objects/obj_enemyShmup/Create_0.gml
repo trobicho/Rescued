@@ -4,6 +4,6 @@
 dead=false;
 x_speed=1;
 state=0;
-shootRate=0.6;
+shootRate=0.8;
 canShoot=false;
 alarm[0]=irandom_range(1,30);

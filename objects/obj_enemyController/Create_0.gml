@@ -3,9 +3,15 @@
 
 borderX=70;
 borderY=70;
-spawnTime=1;
-maxEnemy=8;
+spawnTime=0.5;
+//maxEnemy=10;
 done=false;
 killCount=0;
-killNeeded=25;
+wave=0;
+waveCounter=0;
+waveMax=8;
+waveTime=1;
+//testing
+//killNeeded=25;
+killNeeded=50;
 alarm[0]=1;

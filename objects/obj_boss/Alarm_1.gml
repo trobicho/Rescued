@@ -7,7 +7,7 @@ if(counter1==0){
 	audio_sound_gain(snd_shootBoss1,0.1,0);
 	audio_play_sound(snd_shootBoss1,1,false);
 }
-if(counter1<20){
+if(counter1<40){
 	with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
 		dir=random_range(225,315);
 	}
@@ -16,7 +16,7 @@ if(counter1<20){
 			dir=random_range(225,315);
 		}
 	}
-	alarm[1]=room_speed*0.3;
+	alarm[1]=room_speed*0.15;
 	counter1++;
 }
 else{

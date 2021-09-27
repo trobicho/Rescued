@@ -8,28 +8,75 @@ if(counter1==0){
 	audio_sound_gain(snd_shootBoss1,0.1,0);
 	audio_play_sound(snd_shootBoss1,1,false);
 }
-if(counter1<20){
-	with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
-		if(floor(other.counter1/5)%2==0)
-			dir=225+18*(other.counter1%5);
-		else
-			dir=315-18*(other.counter1%5);
+if(counter1<36){
+	if(floor(other.counter1/9)%2==0){
+		with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+			dir=225+10*(other.counter1%9);
+		}
+		if(bossPhase==2){
+			with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+				dir=225+10*(other.counter1%9);
+				delayed=true;
+				visible=false;
+				alarm[0]=room_speed*0.09;
+			}
+			with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+				dir=225+10*(other.counter1%9);
+				delayed=true;
+				visible=false;
+				alarm[0]=room_speed*0.18;
+			}
+			with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+				dir=225+10*(other.counter1%9);
+				delayed=true;
+				visible=false;
+				alarm[0]=room_speed*0.27;
+			}
+		}
+	}
+	else{
+		with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+			dir=315-10*(other.counter1%9);
+		}
+		if(bossPhase==2){
+			with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+				dir=315-10*(other.counter1%9);
+				delayed=true;
+				visible=false;
+				alarm[0]=room_speed*0.09;
+			}
+			with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+				dir=315-10*(other.counter1%9);
+				delayed=true;
+				visible=false;
+				alarm[0]=room_speed*0.18;
+			}
+			with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+				dir=315-10*(other.counter1%9);
+				delayed=true;
+				visible=false;
+				alarm[0]=room_speed*0.27;
+			}
+		}
 	}
 	if(bossPhase==1){
 		with(instance_create_depth(x+47,y+30,1,obj_bulletBoss)){
-			if(floor(other.counter1/5)%2==0)
-				dir=315-18*(other.counter1%5);
+			if(floor(other.counter1/9)%2==0)
+				dir=315-10*(other.counter1%9);
 			else
-				dir=225+18*(other.counter1%5);
+				dir=225+10*(other.counter1%9);
 		}
 	}
 	else{
 	//else if(counter1%2==0){
 		with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
-			dir=random_range(225,315);
+			dir=random_range(230,310);
+		}
+		with(instance_create_depth(x-47,y+30,1,obj_bulletBoss)){
+			dir=random_range(240,300);
 		}
 	}
-	alarm[2]=room_speed*0.35;
+	alarm[2]=room_speed*0.18;
 	counter1++;
 }
 else{
