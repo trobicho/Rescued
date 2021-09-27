@@ -71,6 +71,7 @@
     {"id":{"name":"obj_fume","path":"objects/obj_fume/obj_fume.yy",},"order":35,},
     {"id":{"name":"spr_bossPhase3","path":"sprites/spr_bossPhase3/spr_bossPhase3.yy",},"order":8,},
     {"id":{"name":"snd_explosion","path":"sounds/snd_explosion/snd_explosion.yy",},"order":5,},
+    {"id":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"order":13,},
     {"id":{"name":"obj_sas1","path":"objects/obj_sas1/obj_sas1.yy",},"order":25,},
     {"id":{"name":"obj_intro","path":"objects/obj_intro/obj_intro.yy",},"order":8,},
     {"id":{"name":"obj_enemyController","path":"objects/obj_enemyController/obj_enemyController.yy",},"order":9,},
