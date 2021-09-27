@@ -5,6 +5,6 @@ if(!invincible){
 	alarm[0]=room_speed*invincibilityFrame;
 	alarm[1]=room_speed*blinkRate;
 	invincible=true;
-	Health-=5;
+	Health-=8;
 	audio_play_sound(snd_hitPlayer,1,false);
 }

@@ -5,7 +5,7 @@ if(other.visible==true){
 		alarm[0]=room_speed*invincibilityFrame;
 		alarm[1]=room_speed*blinkRate;
 		invincible=true;
-		Health-=10;
+		Health-=15;
 	}
 	audio_play_sound(snd_hitPlayer,1,false);
 }
