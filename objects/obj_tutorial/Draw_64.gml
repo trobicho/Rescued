@@ -1,19 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(step==0){
-
-			draw_set_color(c_white);
-			draw_set_halign(fa_middle);
-			draw_text(guiW/2,60,"Press Spacebar to scan the area");
-}
-else{
-
-			draw_set_color(c_white);
-			draw_set_halign(fa_middle);
-			draw_text(guiW/2,60,"dddddddddddddda");
-}
-
 /*
 if(room==Room1){
 	switch(step){

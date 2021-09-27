@@ -18,11 +18,19 @@ if(line==array_length_2d(dialogues,dialogue)-1){
 		case Dialogues.DEATH_BY_SUN:
 			room_restart();
 			break;
+		/*
 		case Dialogues.GAIN_ENERGY1:
 			obj_ship.Health+=20;
 			break;
 		case Dialogues.GAIN_ENERGY2:
 			obj_ship.Health=100;
+			break;
+		*/
+		case Dialogues.GAIN_ENERGY1:
+			room_goto(Planet1);
+			break;
+		case Dialogues.GAIN_ENERGY2:
+			room_goto(Planet1);
 			break;
 		case Dialogues.RUNOUT_O2:
 			room_restart();
